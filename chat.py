@@ -10,7 +10,7 @@ def read_root():
 def read_item(item_id: int, q: str = None):
     return {"item_id": item_id, "q": q}
 
-@app.post("/chat/{message}")
+@app.post("/chat")
 def chat(message: str):
     response = "I'm sorry, I don't understand your message."
     if "hello" in message.lower() or "hi" in message.lower():
