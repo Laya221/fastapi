@@ -29,7 +29,6 @@ colorama==0.4.4
 commonmark==0.9.1
 cycler==0.11.0
 cymem==2.0.6
-Cython @ file:///C:/Users/ALAMEEN/Desktop/Adaptive-Traffic-Signal-Timer-main/Code/YOLO/darkflow/Cython-0.29.30-cp38-cp38-win_amd64.whl
 datasets==2.6.1
 debugpy==1.5.1
 decorator==5.1.1
