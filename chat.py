@@ -6,6 +6,8 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 from chatterbot.trainers import ChatterBotCorpusTrainer
 import time
+import spacy.cli 
+spacy.cli.download("en_core_web_md")
 time.clock = time.time
 app = FastAPI()
 
