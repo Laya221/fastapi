@@ -2,12 +2,12 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import uvicorn
-#from chatterbot import ChatBot
-#from chatterbot.trainers import ListTrainer
-#from chatterbot.trainers import ChatterBotCorpusTrainer
+from chatterbot import ChatBot
+from chatterbot.trainers import ListTrainer
+from chatterbot.trainers import ChatterBotCorpusTrainer
 import time
-#import spacy.cli 
-#spacy.cli.download("en_core_web_md")
+import spacy.cli 
+spacy.cli.download("en_core_web_sm")
 time.clock = time.time
 app = FastAPI()
 
@@ -23,4 +23,4 @@ def home(request: Request):
 
 @app.get("/getChatBotResponse")
 def get_bot_response(msg: str):
-    return str(msg)#str(chatbot.get_response(msg))
+    return str(chatbot.get_response(msg))
