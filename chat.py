@@ -9,7 +9,7 @@ import time
 time.clock = time.time
 app = FastAPI()
 
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="")
 
 
 chatbot = ChatBot("Chatpot")
