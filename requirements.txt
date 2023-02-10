@@ -4,4 +4,5 @@ gunicorn==20.1.0
 lxml==4.8.0
 uvicorn==0.20.0
 requests==2.25.1
+ChatterBot==1.1.0a7
 
