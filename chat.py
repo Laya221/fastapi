@@ -14,9 +14,9 @@ app = FastAPI()
 templates = Jinja2Templates(directory="")
 
 
-#chatbot = ChatBot("Chatpot")
-#chatbot.storage.drop()
-#trainer = ListTrainer(chatbot)
+chatbot = ChatBot("Chatpot")
+chatbot.storage.drop()
+trainer = ListTrainer(chatbot)
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
