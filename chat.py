@@ -8,8 +8,7 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 import time
 #import spacy.cli 
 time.clock = time.time
-import en_core_web_sm
-nlp = en_core_web_sm.load()
+
 #import spacy
 
 #nlp = spacy.load('en_core_web_md')
@@ -18,9 +17,15 @@ app = FastAPI()
 templates = Jinja2Templates(directory="")
 
 
-chatbot = ChatBot("Chatpot")
-chatbot.storage.drop()
-trainer = ListTrainer(chatbot)
+# Create a ChatBot instance
+chatbot = ChatBot(name='MyChatBot', read_only=True, logic_adapters=['chatterbot.logic.BestMatch'])
+
+# Create a ChatterBot trainer
+trainer = ChatterBotCorpusTrainer(chatbot)
+
+# Train the chatbot using the English corpus
+trainer.train("chatterbot.corpus.english")
+
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
