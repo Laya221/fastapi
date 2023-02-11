@@ -41,7 +41,7 @@ def chat(inp):
 
     for i in data['intents']:
         if i['tag'] == tag:
-            print("ChatBot:" , np.random.choice(i['responses']))
+           return( np.random.choice(i['responses']))
 
 
 
