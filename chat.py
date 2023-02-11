@@ -6,11 +6,14 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 from chatterbot.trainers import ChatterBotCorpusTrainer
 import time
-#import spacy.cli 
 time.clock = time.time
 import spacy
-nlp = spacy.load("en")
 
+nlp = spacy.load("en_core_web_sm")
+
+if not nlp.valid:
+    import spacy.cli
+    spacy.cli.download("en_core_web_sm")
 
 app = FastAPI()
 
