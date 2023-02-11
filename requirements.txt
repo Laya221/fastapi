@@ -5,6 +5,9 @@ lxml==4.8.0
 uvicorn==0.20.0
 requests==2.25.1
 jinja2==3.0.3
-ChatterBot==1.1.0a7
-spacy==2.2.3
+tensorflow==2.3.1
+nltk==3.5
+numpy==1.18.5
+scikit_learn==0.23.2
+
 
