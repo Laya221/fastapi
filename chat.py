@@ -8,7 +8,6 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 import time
 import spacy.cli 
 time.clock = time.time
-!python -m spacy download en_core_web_md
 app = FastAPI()
 
 templates = Jinja2Templates(directory="")
