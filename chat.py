@@ -8,7 +8,8 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 import time
 #import spacy.cli 
 time.clock = time.time
-
+import en_core_web_sm
+nlp = en_core_web_sm.load()
 #import spacy
 
 #nlp = spacy.load('en_core_web_md')
