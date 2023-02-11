@@ -6,12 +6,12 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 from chatterbot.trainers import ChatterBotCorpusTrainer
 import time
-import spacy.cli 
+#import spacy.cli 
 time.clock = time.time
 
-import spacy
+#import spacy
 
-nlp = spacy.load('en_core_web_md')
+#nlp = spacy.load('en_core_web_md')
 app = FastAPI()
 
 templates = Jinja2Templates(directory="")
