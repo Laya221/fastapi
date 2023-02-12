@@ -820,36 +820,7 @@ strong.chat_time {
         </div>
           <a id="prime" class="fab"><i class="prime zmdi zmdi-comment-outline"></i></a>
       </div>
-<script type="text/javascript">
-       $(document).ready(function() {
-                      function getBotResponse() {
-                          var rawText = $('#chatSend').val();
-                          var userHtml = '<span id="user_chat" class="chat_msg_item chat_msg_item_user">'+rawText+'</span>';
-                          $('#chatSend').val("");
-                          $('#chat_converse').append(userHtml);
-      
-                          $.get("/getChatBotResponse", { msg: rawText }).done(function(data) {
-                          var botHtml = ' <span class="chat_msg_item chat_msg_item_admin"><div class="chat_avatar"><img src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png"/></div>' + data + '</span>';
-                           $("#chat_converse").append(botHtml);
-                           document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
-                          });
-                         
-                      }
-      
-                     
-      
-                      $('#chatSend').keypress(function(e) {
-                          if(e.which == 13) {
-                              getBotResponse();
-                          }
-                      });
-                      $('#fab_send').click(function() {
-                          getBotResponse();
-                      })
-                  });  
-      </script>
-          
-          <script type="text/javascript" src='http://code.jquery.com/jquery-1.11.3.min.js'></script>
+  <script src="https://gist.github.com/Jbat1Jumper/7f8182fd4c3e38b5d422a2118102a110.js"></script>
 <script type="text/javascript">
     hideChat(0);
       $('#prime').click(function() {
@@ -946,6 +917,36 @@ strong.chat_time {
       
       
           </script>
+<script type="text/javascript">
+       $(document).ready(function() {
+                      function getBotResponse() {
+                          var rawText = $('#chatSend').val();
+                          var userHtml = '<span id="user_chat" class="chat_msg_item chat_msg_item_user">'+rawText+'</span>';
+                          $('#chatSend').val("");
+                          $('#chat_converse').append(userHtml);
+      
+                          $.get("/getChatBotResponse", { msg: rawText }).done(function(data) {
+                          var botHtml = ' <span class="chat_msg_item chat_msg_item_admin"><div class="chat_avatar"><img src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png"/></div>' + data + '</span>';
+                           $("#chat_converse").append(botHtml);
+                           document.getElementById('userInput').scrollIntoView({block: 'start', behavior: 'smooth'});
+                          });
+                         
+                      }
+      
+                     
+      
+                      $('#chatSend').keypress(function(e) {
+                          if(e.which == 13) {
+                              getBotResponse();
+                          }
+                      });
+                      $('#fab_send').click(function() {
+                          getBotResponse();
+                      })
+                  });  
+      </script>
+          
+  
             
       
    
