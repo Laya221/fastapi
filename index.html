@@ -820,10 +820,7 @@ strong.chat_time {
         </div>
           <a id="prime" class="fab"><i class="prime zmdi zmdi-comment-outline"></i></a>
       </div>
-        <script src='http://code.jquery.com/jquery-1.11.3.min.js'></script>
-      
-      
-          <script>
+<script>
        $(document).ready(function() {
                       function getBotResponse() {
                           var rawText = $('#chatSend').val();
@@ -850,10 +847,11 @@ strong.chat_time {
                           getBotResponse();
                       })
                   });  
-      
+      </script>
           
-                  hideChat(0);
-      
+          <script src='http://code.jquery.com/jquery-1.11.3.min.js'></script>
+<script>
+    hideChat(0);
       $('#prime').click(function() {
         toggleFab();
       });
@@ -948,6 +946,9 @@ strong.chat_time {
       
       
           </script>
+            
+      
+   
       
       </body>
       </html>
