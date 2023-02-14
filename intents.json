@@ -3,6 +3,22 @@
      "patterns": ["Hi", "Hey", "Is anyone there?", "Hello", "Hay"],
      "responses": ["Hello", "Hi", "Hi there"]
     },
+    {"tag": "CourtesyGreeting",
+     "patterns": [ "How are you?",
+     "Hi how are you?",
+     "Hello how are you?",
+     "Hola how are you?",
+     "How are you doing?",
+     "Hope you are doing well?",
+     "Hello hope you are doing well?"],
+     "responses": ["Hello, I am great, how are you? Please tell me your LayaBot user",
+     "Hello, how are you? I am great thanks! Please tell me your LayaBot user",
+     "Hello, I am good thank you, how are you? Please tell me your LayaBot user",
+     "Hi, I am great, how are you? Please tell me your LayaBot user",
+     "Hi, how are you? I am great thanks! Please tell me your LayaBot user",
+     "Hi, I am good thank you, how are you? Please tell me your LayaBot user",
+     "Hi, good thank you, how are you? Please tell me your LayaBot user"]
+    },
     {"tag": "goodbye",
      "patterns": ["Bye", "See you later", "Goodbye"],
      "responses": ["See you later", "Have a nice day", "Bye! Come back again"]
@@ -11,13 +27,14 @@
      "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks for the help"],
      "responses": ["Happy to help!", "Any time!", "My pleasure", "You're most welcome!"]
     },
+    
     {"tag": "about",
      "patterns": ["Who are you?", "What are you?", "Who you are?" ],
-     "responses": ["I.m Joana, your bot assistant", "I'm Joana, an Artificial Intelligent bot"]
+     "responses": ["I.m Laya, your bot assistant to teach you English skills", "I'm Laya, an Artificial Intelligent bot teach you English skills"]
     },
     {"tag": "name",
     "patterns": ["what is your name", "what should I call you", "whats your name?"],
-    "responses": ["You can call me Joana.", "I'm Joana!", "Just call me as Joana"]
+    "responses": ["You can call me Laya.", "I'm Laya!", "Just call me as Laya"]
     },
     {"tag": "help",
     "patterns": ["Could you help me?", "give me a hand please", "Can you help?", "What can you do for me?", "I need a support", "I need a help", "support me please"],
