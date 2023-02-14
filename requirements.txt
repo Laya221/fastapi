@@ -10,5 +10,6 @@ nltk==3.5
 numpy==1.18.5
 scikit_learn==0.23.2
 protobuf==3.9.2
+pickle5==0.0.11
 
 
