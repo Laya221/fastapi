@@ -7,7 +7,7 @@ import numpy as np
 from tensorflow import keras
 from sklearn.preprocessing import LabelEncoder
 import random
-import pickle
+import pickle5 as pickle
 import time
 time.clock = time.time
 
