@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request,Form
+from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import uvicorn
@@ -10,8 +10,7 @@ import random
 import pickle
 import time
 time.clock = time.time
-class static:
-    results=[]
+
 with open("intents.json") as file:
     data = json.load(file)
 app = FastAPI()
@@ -48,10 +47,8 @@ def chat(inp):
 
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
-    return templates.TemplateResponse("home.html", {"request": request})
+    return templates.TemplateResponse("index.html", {"request": request})
 
-@app.post("/")
-def get_bot_response(request: Request, msg: str = Form(...)):
-     static.results.append([msg,str(chat(msg))])
-     return templates.TemplateResponse('index.html', context={'request': request, 'results': static.results})
-
+@app.get("/getChatBotResponse")
+def get_bot_response(msg: str):
+    return str(chat(msg))
