@@ -7,7 +7,7 @@ time.clock = time.time
 import openai
 
 
-openai.api_key = "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"
+openai.api_key = "sk-kk"
 COMPLETIONS_MODEL = "text-davinci-002"
 
 app = FastAPI()
