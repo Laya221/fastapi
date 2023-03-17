@@ -8,7 +8,7 @@ jinja2==3.0.3
 nltk==3.5
 numpy==1.18.5
 protobuf==3.9.2
-opnenai
+openai==0.27.2
 
 
 
