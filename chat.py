@@ -2,17 +2,12 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import uvicorn
-import json 
-import numpy as np
-
-import random
 import time
 time.clock = time.time
 import openai
-import pandas as pd
-import numpy as np
 
-openai.api_key = "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"
+
+openai.api_key = "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"
 COMPLETIONS_MODEL = "text-davinci-002"
 
 app = FastAPI()
