@@ -124,6 +124,8 @@ def conversation(user_response):
     static.my_set=static.my_set1. union(static.my_set2)
     prompt="""say 'Hello {}! ,You will learn following vocabularies {}' """.format(static.user_info['name'],static.my_set)
     bot_response=A2ZBot(prompt)
+    static.step='step1'
+    static.history=[]  
     return bot_response
   
       
