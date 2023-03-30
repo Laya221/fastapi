@@ -21,7 +21,7 @@ api_key=""
 for i in range(1,len(temp),2):
     api_key+=temp[i]
 
-os.environ["OPENAI_API_KEY"] = api_key
+#api_key= api_key
 
 app = FastAPI()
 templates = Jinja2Templates(directory="")
@@ -51,7 +51,7 @@ def conversation(msg):
     
    prompt_template = PromptTemplate(input_variables=["chat_history","question"], template=static.template)
    llm_chain = LLMChain(
-        llm = OpenAI(model_name="gpt-3.5-turbo", temperature=0.6,
+        llm = OpenAI(model_name="gpt-3.5-turbo", temperature=0.6,openai_api_key=api_key
         max_tokens=300, n=1),
         prompt=prompt_template,
         verbose=False,
@@ -73,3 +73,5 @@ def get_bot_response(msg: str):
     return str(conversation(msg))
 
 
+if __name__ == "__main__":
+    uvicorn.run("chat:app")
