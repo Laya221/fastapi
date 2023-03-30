@@ -9,7 +9,7 @@ from fastapi.templating import Jinja2Templates
 import numpy as np
 from langchain.chains.conversation.memory import ConversationBufferMemory
 from langchain import OpenAI, LLMChain, PromptTemplate
-from langchain.chat_models import ChatOpenAI
+#from langchain.chat_models import ChatOpenAI
 import random
 import time
 time.clock = time.time
@@ -51,7 +51,7 @@ def conversation(msg):
     
    prompt_template = PromptTemplate(input_variables=["chat_history","question"], template=static.template)
    llm_chain = LLMChain(
-        llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0.6,
+        llm = OpenAI(model_name="gpt-3.5-turbo", temperature=0.6,
         max_tokens=300, n=1),
         prompt=prompt_template,
         verbose=False,
