@@ -58,7 +58,7 @@ def conversation(msg):
         memory=static.memory,
    
         )
-   result=llm_chain.run(msg)
+   result=llm_chain.predict(question=msg)
    time.sleep(0.5)
    return result.replace('A2ZBot:','',-1)
 
