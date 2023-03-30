@@ -51,7 +51,7 @@ def conversation(msg):
     
    prompt_template = PromptTemplate(input_variables=["chat_history","question"], template=static.template)
    llm_chain = LLMChain(
-        llm = OpenAI(model_name="gpt-3.5-turbo", temperature=0.6,openai_api_key=api_key
+        llm = OpenAI(model_name="gpt-3.5-turbo", temperature=0.6,openai_api_key=api_key,
         max_tokens=300, n=1),
         prompt=prompt_template,
         verbose=False,
