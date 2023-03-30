@@ -72,5 +72,4 @@ def home(request: Request):
 def get_bot_response(msg: str):
     return str(conversation(msg))
 
-if __name__ == "__main__":
-    uvicorn.run("chat:app")
+
