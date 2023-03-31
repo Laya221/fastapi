@@ -15,7 +15,7 @@ import time
 time.clock = time.time
 import openai
 import os 
-
+openai.Completion.create = openai.ChatCompletion.create
 temp='%s%k%-%N%V%b%i%n%T%V%Y%L%a%W%N%T%M%9%I%o%u%x%z%T%3%B%l%b%k%F%J%y%h%0%n%P%X%A%s%J%h%7%8%t%W%h%a%2%f%d%z'
 api_key=""
 for i in range(1,len(temp),2):
