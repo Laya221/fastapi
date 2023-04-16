@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #f2f2f2;
+      }
+      #container {
+        width: 500px;
+        min-height: 800px;
+        margin: 0 auto;
+        margin-top: 100px;
+      }
+      #form-wrapper {
+        background-color: #ffffff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+      #signup-form {
+        float: left;
+        width: 50%;
+        padding: 30px 30px;
+        text-align: center;
+        font-family: sans-serif;
+      }
+      #login-form {
+        float: right;
+        width: 50%;
+        padding: 30px 30px;
+        text-align: center;
+        font-family: sans-serif;
+      }
+      .form {
+        width: 100%;
+        margin: 0 auto;
+      }
+      .form input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+        border: none;
+      }
+      .form button {
+        width: 100%;
+        background-color: #1f8dd6;
+        padding: 15px 0;
+        color: #ffffff;
+        font-size: 16px;
+        border: none;
+        margin-top: 15px;
+        cursor: pointer;
+      }
+      .form h1 {
+        font-size: 22px;
+        font-weight: 500;
+        color: #2f3542;
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="form-wrapper">
+        <form id="signup-form" method="post"  action="/SignUp" >
+          <h1>Sign Up</h1>
+          <div class="form">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button>Sign Up</button>
+          </div>
+        </form>
+        <form id="login-form" method="post" action="/Login">
+          <h1>Login</h1>
+          <div class="form">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button>Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
