@@ -232,18 +232,6 @@ def conversation(user_response):
       return """Let's start our journey in English.<br><span style="color:green">Type <b>OK</b> to continue..</span>"""
   if static.step=='step8':
     
-    temp1=A2ZBot("""return more than 100 {} vocabularies  for {} english level as following:
-                word,word,word
-                """.format(static.user_details['path'],static.user_details['current_english_level']))
-    temp1=vocabularies(100,static.user_details['path'])
-    temp2=vocabularies(50,static.user_details['interests'])
-    static.vocabs=temp1.split(',')+temp2.split(',')
-    with open("user_data.json", "r") as read_file:
-      data = json.load(read_file)
-    data[static.email]["user_details"]=static.user_details
-    data[static.email]["vocabs"]=static.vocabs
-    with open("user_data.json", "w") as write_file:
-      json.dump(data, write_file)
     static.step='step9'
     return """Thanks for your time, your information has been successfully collected and you can start your journey with A2ZBot.<br><span style="color:green">Type <b>Hello</b> to start warm up conversation</span>"""
   
