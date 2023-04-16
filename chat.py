@@ -228,6 +228,7 @@ def conversation(user_response):
       static.step='step8'
       code_=A2ZBot('Write python code to create dict called "user_details" with following keys "name,age,current_english_level,path,target_english_level,path,interests" and store user data from following history:\n {}'.format(static.history))
       exec('static.'+code_)
+      time.sleep(3)  
       return """Let's start our journey in English.<br><span style="color:green">Type <b>OK</b> to continue..</span>"""
   if static.step=='step8':
     
