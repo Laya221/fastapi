@@ -245,7 +245,7 @@ def conversation(user_response):
     with open("user_data.json", "w") as write_file:
       json.dump(data, write_file)
     static.step='step9'
-    return """Thanks for your time, your information has been successfully collected and you can start your journey with A2ZBot.<br><span style="color:green">Type <b>Hello</b> to start</span>"""
+    return """Thanks for your time, your information has been successfully collected and you can start your journey with A2ZBot.<br><span style="color:green">Type <b>Hello</b> to start warm up conversation</span>"""
   
   if static.step=='step9':
     with open("user_data.json", "r") as read_file:
