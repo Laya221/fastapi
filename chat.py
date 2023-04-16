@@ -231,7 +231,6 @@ def conversation(user_response):
       time.sleep(3)  
       return """Let's start our journey in English.<br><span style="color:green">Type <b>OK</b> to continue..</span>"""
   if static.step=='step8':
-    if static.step=='step8':
     
     temp1=A2ZBot("""return more than 10 {} vocabularies  for {} english level as following:
                 word,word,word
