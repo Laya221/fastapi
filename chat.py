@@ -262,7 +262,7 @@ def home(request: Request):
     return templates.TemplateResponse("login.html", {"request": request})
 
 @app.post("/SignUp")
-def form_post(request: Request, username: str = Form(...),email: str = Form(...),password: str = Form(...)):
+async def form_post(request: Request, username: str = Form(...),email: str = Form(...),password: str = Form(...)):
     with open("user_data.json", "r") as read_file:
       data = json.load(read_file)
     data[email]={'username':username,'password':password}
@@ -270,7 +270,7 @@ def form_post(request: Request, username: str = Form(...),email: str = Form(...)
       json.dump(data, write_file)
     return templates.TemplateResponse("login.html", {"request": request})
 @app.post("/Login")
-def form_post(request: Request,email: str = Form(...),password: str = Form(...)):
+async def form_post(request: Request,email: str = Form(...),password: str = Form(...)):
     with open("user_data.json", "r") as read_file:
       data = json.load(read_file)
     try:
