@@ -2,6 +2,7 @@ from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import uvicorn
+from fastapi.responses import UJSONResponse
 import json 
 import numpy as np
 from fastapi import FastAPI, Request, Form
@@ -261,7 +262,7 @@ def conversation(user_response):
 def home(request: Request):
     return templates.TemplateResponse("login.html", {"request": request})
 
-@app.post("/SignUp")
+@app.post("/SignUp",response_class=UJSONResponse)
 async def form_post(request: Request, username: str = Form(...),email: str = Form(...),password: str = Form(...)):
     with open("user_data.json", "r") as read_file:
       data = json.load(read_file)
@@ -269,7 +270,7 @@ async def form_post(request: Request, username: str = Form(...),email: str = For
     with open("user_data.json", "w") as write_file:
       json.dump(data, write_file)
     return templates.TemplateResponse("login.html", {"request": request})
-@app.post("/Login")
+@app.post("/Login", response_class=UJSONResponse)
 async def form_post(request: Request,email: str = Form(...),password: str = Form(...)):
     with open("user_data.json", "r") as read_file:
       data = json.load(read_file)
